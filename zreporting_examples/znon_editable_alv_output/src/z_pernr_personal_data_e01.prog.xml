@@ -1,0 +1,10 @@
+*&---------------------------------------------------------------------*
+*& Include          Z_PERNR_PERSONAL_DATA_E01
+*&---------------------------------------------------------------------*
+
+START-OF-SELECTION.
+  DATA(lo_app) = NEW lcl_app( so_pernr[] ).
+  lo_app->read_data( ).
+
+END-OF-SELECTION.
+  lo_app->show_alv( ).
